@@ -1,0 +1,25 @@
+<form bindsubmit="zhuce">
+  <view class="denglu">
+    <text class="shuoming">注册新账号</text>
+
+    <view class="form-wap">
+      <view class="flex-wap input-warp">
+        <text class="label">手机号码</text>
+        <input value="" id="userman" name="uname" class="account-info-input"></input>
+      </view>
+      <view class="flex-wap input-warp">
+        <text class="label">设置密码</text>
+        <input password value="" id="mima1" name="upwd1" class="account-info-input"></input>
+      </view>
+      <view class="flex-wap input-warp">
+        <text class="label">确认密码</text>
+        <input password value="" id="mima2" name="upwd2" class="account-info-input"></input>
+      </view>
+    </view>
+
+    <text wx:if="{{error}}" class="myred"> {{error}}</text>
+
+    <text class="shuoming">请准确填写账号信息，有问题联系客服</text>
+    <button class="mysubmit" style="width:90%" type="primary" form-type="submit">注册账号</button>
+  </view>
+</form>

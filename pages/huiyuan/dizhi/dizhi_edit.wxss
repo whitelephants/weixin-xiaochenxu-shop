@@ -1,0 +1,29 @@
+.dizhi{
+  padding: 5px;
+}
+.dizhi-shouhuo{
+  display: flex;
+  border-bottom:1px dotted gainsboro;
+  padding: 5px 0;
+}
+.dizhi-shouhuo-ren0{
+  width: 5em;
+}
+.dizhi-shouhuo-ren1{
+
+}
+.dizhi-xiangxi{
+  padding: 5px 0;
+  border-bottom:1px dotted gainsboro;
+}
+.dizhi-moren{
+  border-bottom:1px dotted gainsboro;
+  padding: 5px 0;
+  padding-bottom: 15px;
+}
+.dizhi-moren switch{
+  float: right;
+}
+.dizhi-baocun{
+  padding: 10px;
+}

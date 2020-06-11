@@ -1,0 +1,169 @@
+<!-- 顶部菜单 -->
+<view class="swiper-tab">
+  <view class='swiper-tab-list {{currentTab==0 ? "on" : ""}}' data-current='0' bindtap="switchNav">
+    待付款
+  </view>
+  <view class='swiper-tab-list {{currentTab==1 ? "on" : ""}}' data-current='1' bindtap="switchNav">
+    待发货
+  </view>
+  <view class='swiper-tab-list {{currentTab==2 ? "on" : ""}}' data-current='2' bindtap="switchNav">
+    待收货
+  </view>
+  <view class='swiper-tab-list {{currentTab==3 ? "on" : ""}}' data-current='3' bindtap="switchNav">
+    全部菜单
+  </view>
+</view>
+
+<!-- 商品页面 -->
+<swiper current="{{currentTab}}" class='swiper-box' duration="300" style="height:{{winHeight-50}}px" bindchange="huadong">
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{winHeight-33}}px' class="cps">
+
+      <block wx:for="{{ddcps}}" wx:if="{{item.zt==2}}">
+        <view class="cp-danhao">
+          单号：{{item.danhao}} | 时间：{{item.shijian}}
+        </view>
+
+        <block wx:for="{{item.cps}}" wx:for-item="item2">
+          <view class="cp">
+            <view class="cp-tupian">
+              <image class="cp-img" src="{{item2.tupian}}" mode='widthFix'></image>
+            </view>
+            <view class="cp-xinxi">
+              <view class="cp-mingcheng">{{item2.mingcheng}}</view>
+              <view class="cp-xiaoshou">库存：{{item2.mingcheng}} | 限购：{{item2.xiangou}}</view>
+              <view class="cp-jiage">￥：{{item2.jiage}}</view>
+            </view>
+            <view class="cp-shuliang">
+              2 件
+            </view>
+          </view>
+        </block>
+
+        <view class="cp-jiesuan">
+          共 {{item.chanpinshu}} 件产品 | 该订单金额：￥{{item.feiyong}}
+        </view>
+
+        <view class="cp-caozuo">
+          <button size="mini">取消订单</button>
+          <button size="mini">去付款</button>
+        </view>
+      </block>
+
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{winHeight-33}}px'>
+      <block wx:for="{{ddcps}}" wx:if="{{item.zt==3}}">
+        <view class="cp-danhao">
+          单号：{{item.danhao}} | 时间：{{item.shijian}}
+        </view>
+
+        <block wx:for="{{item.cps}}" wx:for-item="item2">
+          <view class="cp">
+            <view class="cp-tupian">
+              <image class="cp-img" src="{{item2.tupian}}" mode='widthFix'></image>
+            </view>
+            <view class="cp-xinxi">
+              <view class="cp-mingcheng">{{item2.mingcheng}}</view>
+              <view class="cp-xiaoshou">库存：{{item2.mingcheng}} | 限购：{{item2.xiangou}}</view>
+              <view class="cp-jiage">￥：{{item2.jiage}}</view>
+            </view>
+            <view class="cp-shuliang">
+              2 件
+            </view>
+          </view>
+        </block>
+
+        <view class="cp-jiesuan">
+          共 {{item.chanpinshu}} 件产品 | 该订单金额：￥{{item.feiyong}}
+        </view>
+
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{winHeight-33}}px'>
+      <block wx:for="{{ddcps}}" wx:if="{{item.zt==4}}">
+        <view class="cp-danhao">
+          单号：{{item.danhao}} | 时间：{{item.shijian}}
+        </view>
+
+        <block wx:for="{{item.cps}}" wx:for-item="item2">
+          <view class="cp">
+            <view class="cp-tupian">
+              <image class="cp-img" src="{{item2.tupian}}" mode='widthFix'></image>
+            </view>
+            <view class="cp-xinxi">
+              <view class="cp-mingcheng">{{item2.mingcheng}}</view>
+              <view class="cp-xiaoshou">库存：{{item2.mingcheng}} | 限购：{{item2.xiangou}}</view>
+              <view class="cp-jiage">￥：{{item2.jiage}}</view>
+            </view>
+            <view class="cp-shuliang">
+              2 件
+            </view>
+          </view>
+        </block>
+
+        <view class="cp-jiesuan">
+          共 {{item.chanpinshu}} 件产品 | 该订单金额：￥{{item.feiyong}}
+        </view>
+
+        <view class="cp-caozuo">
+          <button size="mini">确认收货</button>
+        </view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{winHeight-33}}px'>
+      <block wx:for="{{ddcps}}" >
+        <view class="cp-danhao">
+          单号：{{item.danhao}} | 时间：{{item.shijian}}
+        </view>
+
+        <block wx:for="{{item.cps}}" wx:for-item="item2">
+          <view class="cp">
+            <view class="cp-tupian">
+              <image class="cp-img" src="{{item2.tupian}}" mode='widthFix'></image>
+            </view>
+            <view class="cp-xinxi">
+              <view class="cp-mingcheng">{{item2.mingcheng}}</view>
+              <view class="cp-xiaoshou">库存：{{item2.mingcheng}} | 限购：{{item2.xiangou}}</view>
+              <view class="cp-jiage">￥：{{item2.jiage}}</view>
+            </view>
+            <view class="cp-shuliang">
+              2 件
+            </view>
+          </view>
+        </block>
+
+        <view class="cp-jiesuan">
+          共 {{item.chanpinshu}} 件产品 | 该订单金额：￥{{item.feiyong}}
+        </view>
+
+        <view class="cp-caozuo" wx:if="{{item.zt==2}}">
+          <button size="mini">取消订单</button>
+          <button size="mini">去付款</button>
+        </view>
+
+        <view class="cp-caozuo" wx:if="{{item.zt==3}}">
+          已经付款，等待发货
+        </view>
+
+        <view class="cp-caozuo" wx:if="{{item.zt==4}}">
+          <button size="mini">确认收货</button>
+        </view>
+
+        <view class="cp-caozuo" wx:if="{{item.zt==5}}">
+          订单以完结
+        </view>
+      </block>
+
+    </scroll-view>
+  </swiper-item>
+</swiper>

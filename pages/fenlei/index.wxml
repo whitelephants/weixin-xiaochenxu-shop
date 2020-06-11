@@ -1,0 +1,26 @@
+<view class="fenlei">
+  <view class="zuo" style="height:{{winHeight}}px">
+    <block wx:for="{{navList}}" wx:key="*this">
+      <text class='type-nav {{curNav==item.id ? "selected" : ""}}'
+        bindtap='selectNav'
+        data-id="{{item.id}}">{{item.name}}</text>
+    </block>
+  </view>
+
+  <!-- <view class="you"> -->
+    <view class="zuixin">
+      <block wx:for="{{zuixins}}">
+        <navigator url="" class="zuixin-item">
+          <image src="{{item.cp_tupian}}" mode="widthFix" class="zuixin-img"></image>
+          <text class="zuixin-mc">{{item.cp_mingcheng}}</text>
+          <view>
+            <text class="zuixin-jiage0">￥</text>
+            <text class="zuixin-jiage1">{{item.jiage}}</text>
+            <text class="zuixin-jiage2">{{item.cp_id}}人付款</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  <!-- </view> -->
+
+</view>

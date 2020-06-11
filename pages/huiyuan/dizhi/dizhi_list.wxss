@@ -1,0 +1,56 @@
+page{
+  background-color: #f2f2f2;
+}
+.dizhis{
+  
+}
+.dizhi{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;background-color: white;
+  margin: 10px
+}
+.dizhi-toubu{
+  display: flex;
+  border-bottom: 1px dotted gainsboro;
+  padding: 5px 0;
+}
+.dizhi-toubu-xm{
+  flex-grow: 1;
+}
+.dizhi-toubu-dh{
+  
+}
+.dizhi-miaoshu{
+  color: gray;
+  border-bottom: 1px dotted gainsboro;
+}
+.dizhi-caozuo{
+  display: flex;
+  padding: 5px 0;
+}
+.dizhi-caozuo-zuo{
+  flex-grow: 1;
+}
+.dizhi-caozuo-moren{
+  
+}
+.dizhi-caozuo-you{
+  display: flex;
+}
+.dizhi-caozuo-bianji{
+  
+}
+.dizhi-caozuo-shanchu{
+  
+}
+.tianjia{
+  background-color: orangered;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+}

@@ -1,0 +1,29 @@
+<scroll-view class="dizhis" scroll-y style='height:{{winHeight-40}}px'>
+  <block wx:for="{{dizhis}}">
+    <view class="dizhi">
+      <view class="dizhi-toubu">
+        <view class="dizhi-toubu-xm">{{item.xingming}}</view>
+        <view class="dizhi-toubu-dh">{{item.shouji}}</view>
+      </view>
+
+      <view class="dizhi-miaoshu">
+        {{item.diqu1}}{{item.diqu2}}{{item.diqu3}}{{item.dizhi}}
+      </view>
+
+      <view class="dizhi-caozuo">
+        <view class="dizhi-caozuo-zuo">
+          <switch type="checkbox" checked="{{item.yn_moren==1 ? true : false}}" data-dizhiid="{{item.dizhi_id}}" bindchange="setMoren"></switch>
+          <text class="dizhi-caozuo-moren">默认地址</text>
+        </view>
+        <view class="dizhi-caozuo-you">
+          <view class="dizhi-caozuo-bianji" bindtap="xiugai" data-dizhiid="{{item.dizhi_id}}">编辑</view> -
+          <view class="dizhi-caozuo-shanchu" bindtap="mydel" data-dizhiid="{{item.dizhi_id}}">删除</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<view class="tianjia" bindtap="tianjia">
+  添加新地址
+</view>

@@ -1,0 +1,23 @@
+.caidan{
+  display: flex;
+  padding: 10px;
+  border-top:1px solid gainsboro;
+  border-bottom:1px solid gainsboro;
+  margin-top:10px; 
+}
+.caidan-icon{
+  width: 20px;
+  height: 20px;
+}
+.caidan-text{
+  flex-grow: 1;
+  margin-left: 10px
+
+}
+.caidan-arrow{
+  width: 16px;
+  height: 16px;
+}
+.img1{
+  width: 100%
+}

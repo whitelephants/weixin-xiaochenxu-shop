@@ -1,0 +1,20 @@
+<form>
+  <view class="denglu">
+    <text class="shuoming">请输入您的会员账号</text>
+
+    <view class="form-wap">
+      <view class="flex-wap input-warp">
+        <text class="label">账号</text>
+        <input value="" id="userman" name="uname" class="account-info-input"></input>
+      </view>
+      <view class="flex-wap input-warp">
+        <text class="label">密码</text>
+        <input value="" id="mima" name="upwd" class="account-info-input"></input>
+      </view>
+    </view>
+    <text class="shuoming">请准确填写账号信息，有问题联系客服</text>
+    <button class="mysubmit" style="width:90%" type="primary">登录</button>
+    <button class="mysubmit" style="width:90%" type="primary" bindtap="toReg">注册新用户</button>
+    <button open-type="getUserInfo" style="width:90%" bindgetuserinfo="getWxInfo" >微信登录</button>
+  </view>
+</form>

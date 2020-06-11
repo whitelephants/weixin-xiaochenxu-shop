@@ -1,0 +1,25 @@
+ <image mode="widthFix" class="img1" src="/image/ad01.png"></image>
+
+<navigator url="" class="caidan">
+  <image class="caidan-icon" src="/image/sys01.png"></image>
+  <text class="caidan-text">帮助中心</text>
+  <image class="caidan-arrow" src="/image/right.png"></image>
+</navigator>
+
+<navigator url="" class="caidan">
+  <image class="caidan-icon" src="/image/sys02.png"></image>
+  <text class="caidan-text">活动列表</text>
+  <image class="caidan-arrow" src="/image/right.png"></image>
+</navigator>
+
+<navigator url="" class="caidan">
+  <image class="caidan-icon" src="/image/sys03.png"></image>
+  <text class="caidan-text">留言反馈</text>
+  <image class="caidan-arrow" src="/image/right.png"></image>
+</navigator>
+
+<navigator url="" class="caidan">
+  <image class="caidan-icon" src="/image/sys04.png"></image>
+  <text class="caidan-text">关于我们</text>
+  <image class="caidan-arrow" src="/image/right.png"></image>
+</navigator>

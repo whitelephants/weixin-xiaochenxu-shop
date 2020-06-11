@@ -1,0 +1,26 @@
+<view class="qukuai">
+  <view class="y01"></view>
+  <text class="t01">我的收藏</text>
+  <navigator class="m01">会员中心></navigator>
+</view>
+
+<block wx:for="{{shoucang}}" wx:key="*this">
+<view class="sc">
+  <navigator url='' class="sc-xiangmu">
+    <view class="sc-tupian">
+      <image class="sc-img" src='{{item.cp_tupian}}' mode='widthFix'> </image>
+    </view>
+    <view class="sc-xinxi">
+      <view class="sc-shijian">收藏时间：{{item.add_data}}</view>
+      <view class="sc-cpmc">{{item.cp_mingcheng}}</view>
+      <view class="sc-xinxi2">
+        <view class="sc-kucun">库存：{{item.cp_kucu}}</view>
+        <view class="sc-xiangou"> | 限购:{{item.xiangou_shuliang}} | </view>
+        <view class="sc-jiage0"> ￥</view>
+        <view class="sc-jiage1">{{item.jiage}}</view>
+      </view>
+    </view>
+  </navigator>
+  <view class="sc-del" data-scid='{{item.sc_id}}' bindtap='mydel'>删除</view>
+</view>
+</block>

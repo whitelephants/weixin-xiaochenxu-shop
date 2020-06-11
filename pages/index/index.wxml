@@ -1,0 +1,111 @@
+<!-- 置顶图片 -->
+<view class="ad01">
+  <image mode="widthFix" class="ad01-img" src="/image/ad01.png"></image>
+</view>
+<view class="ad01">
+  <image mode="widthFix" class="ad01-img" src="{{ad_img2}}"></image>
+</view>
+
+<!-- 轮播广告 -->
+<swiper indicator-dots="{{true}}" vertical="{{false}}" autoplay="{{true}}" interval="3000" duration="500">
+  <block wx:for="{{image2}}" wx:key="item.id">
+    <navigator url="{{item.dizhi}}">
+      <swiper-item>
+        <image mode="widthFix" class="ad01-img" src="{{item.tupian}}"></image>
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+
+<!-- 快捷菜单 -->
+<view class="menu">
+  <navigator url="" class="menu-item">
+    <image src="/image/menu01.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">品牌大全</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu02.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">最新上架</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu03.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">用户中心</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu04.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">订单列表</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu05.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">留言反馈</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu06.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">活动列表</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu07.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">帮助中心</text>
+  </navigator>
+  <navigator url="" class="menu-item">
+    <image src="/image/menu08.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">关于我们</text>
+  </navigator>
+</view>
+
+<!-- 最新消息 -->
+<block wx:for="{{xinxis}}">
+  <navigator url='{{item.myid}}' class='xinxi'>
+    <image class='xinxi-icon' src='/image/news.png'></image>
+    <text class="xinxi-text">{{item.myshijian}} {{item.mybiaoti}}</text>
+    <image class='xinxi-arrow' src='/image/right.png'></image>
+  </navigator>
+</block>
+
+<!-- 区块标题 -->
+<view class="qukuai">
+  <view class="y01"></view>
+  <text class="t01">最新上架产品</text>
+  <view class="m01">更多></view>
+</view>
+
+<!-- 最新上架产品 -->
+<view class="zuixin">
+  <block wx:for="{{zuixins}}">
+    <navigator url="/pages/chanping/xiangxi?cpid=635&cpmc=自然堂（CHANDO）雪域精粹水乳套装（冰肌水+乳液+雪域三件套）清润型（化妆品套装）" class="zuixin-item">
+      <!-- <navigator url="/pages/chanping/xiangxi?cpid={{item.cp_id}}&cpmc={{item.cp_mingcheng}}" class="zuixin-item"> -->
+      <image src="{{item.cp_tupian}}" mode="widthFix" class="zuixin-img"></image>
+      <text class="zuixin-mc">{{item.cp_mingcheng}}</text>
+      <view>
+        <text class="zuixin-jiage0">￥</text>
+        <text class="zuixin-jiage1">{{item.jiage}}</text>
+        <text class="zuixin-jiage2">{{item.cp_id}}人付款</text>
+      </view>
+    </navigator>
+  </block>
+</view>
+
+<!-- 销售排行 -->
+<view class="qukuai">
+  <view class="y01"></view>
+  <text class="t01">销售排行</text>
+  <view class="m01">更多></view>
+</view>
+<block wx:for="{{zuixins}}">
+  <navigator url="/pages/chanping/xiangxi?cpid=635&cpmc=自然堂（CHANDO）雪域精粹水乳套装（冰肌水+乳液+雪域三件套）清润型（化妆品套装）" class="paihang-item">
+    <!-- <navigator url="/pages/chanping/xiangxi?cpid={{item.cp_id}}&cpmc={{item.cp_mingcheng}}" class="paihang-item"> -->
+    <view class="paihang-tupian">
+      <image class="paihang-img" src="{{item.cp_tupian}}" mode="widthFix"></image>
+    </view>
+    <view class="paihang-xinxi">
+      <text class="paihang-mingcheng">{{item.cp_mingcheng}}</text>
+      <text class="paihang-jianjie">产品简介</text>
+      <view>
+        <text class="paihang-xuhao">No.{{index+1}}</text>
+        <text class="paihang-xiaoshou"> | 456人付款 | </text>
+        <text class="paihang-jiage0">￥</text>
+        <text class="paihang-jiage1">{{item.jiage}}</text>
+      </view>
+    </view>
+  </navigator>
+</block>

@@ -1,0 +1,68 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/test",
+
+    "pages/fenlei/index",
+
+    "pages/gouwu/index",
+    "pages/huiyuan/gouwuche/che_list",
+
+    "pages/huiyuan/index",
+    "pages/huiyuan/zhanghao/reg",
+    "pages/huiyuan/index2",
+    "pages/huiyuan/shoucang/sx_list",
+    "pages/huiyuan/dizhi/dizhi_list",
+    "pages/huiyuan/dizhi/dizhi_add",
+    "pages/huiyuan/dizhi/dizhi_edit",
+    "pages/huiyuan/dingdan/dingdan_list",
+
+    "pages/fuwu/index",
+
+    "pages/chanping/xiangxi"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "小程序框架",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#8a8a8a",
+    "selectedColor": "#d4237a",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"pages/image/a-off.png",
+        "selectedIconPath":"pages/image/a-on.png"
+      },
+      {
+        "pagePath": "pages/fenlei/index",
+        "text": "分类",
+        "iconPath":"pages/image/b-off.png" ,
+        "selectedIconPath":"pages/image/b-on.png"
+      },
+      {
+        "pagePath": "pages/huiyuan/gouwuche/che_list",
+        "text": "购物车",
+        "iconPath": "pages/image/c-off.png",
+        "selectedIconPath": "pages/image/c-on.png"
+      },
+      {
+        "pagePath": "pages/huiyuan/index",
+        "text": "会员",
+        "iconPath": "pages/image/d-off.png",
+        "selectedIconPath": "pages/image/d-on.png"
+      },
+      {
+        "pagePath": "pages/fuwu/index",
+        "text": "服务",
+        "iconPath": "pages/image/e-off.png",
+        "selectedIconPath": "pages/image/e-on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
